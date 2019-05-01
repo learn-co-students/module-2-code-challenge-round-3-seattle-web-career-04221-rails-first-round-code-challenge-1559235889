@@ -27,9 +27,11 @@ We've been building an application where we can see all of the sweets that vendo
 
 ***To help complete this task we listed out the required steps below. Look through them carefully to get a sense of the requirements of this code challenge, then tackle them one by one.***
 
-1. Start with creating the `VendorSweet` model. We'll need to make sure to also have the appropriate migration to our schema for this to work. It is always suggested to test that our migration worked, so go into the console and try to create your first `VendorSweet` with a given `Sweet` and `Vendor`.
+1. Start with creating the `VendorSweet` model. It should have an attribute for the price at which the sweet will be sold by the vendor. We'll need to make sure to also have the appropriate migration to our schema for this to work. It is always suggested to test that our migration worked, so go into the console and try to create your first `VendorSweet` with a given `Sweet`, `Vendor`, and price.
 
-2. A user should be able to go and create a new connection between a vendor and a sweet through a new form of `VendorSweet`. The form should include a dropdown to select a vendor and another dropdown to select its sweet. We'd like the route to this form to follow the RESTful convention. Once the `VendorSweet` is created, we'd like to go to the selected vendor's show page.
+2. A user should be able to go and create a new connection between a vendor and a sweet through a new form of `VendorSweet`. The form should include a dropdown to select a vendor, another dropdown to select its sweet, and an input for the price. We'd like the route to this form to follow the RESTful convention (as well as the route that it should submit its form values to). 
+
+  2a. Once the `VendorSweet` is created, we'd like to go to the selected vendor's show page _if the `VendorSweet` is valid, including its price_. If the `VendorSweet` is *not* valid, we should see the form, with the values the user entered, and a list of validation messages about what went wrong. To help you build the correct validation or validations, think about some prices your users could input that _wouldn't_ be valid.
 
 3. The vendor's show page should include the vendor's name (ie. Insomnia Cookies) and a list of the sweets that they sell.
 
